@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./component/Counter";
 import Greet from "./component/Greet";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Greet name="Rajeev" />
       <Greet name="Satrudhan" />
       <Greet name="Rajeev" />
+      <Counter />
     </div>
   );
 }
