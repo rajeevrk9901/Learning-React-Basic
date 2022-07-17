@@ -1,16 +1,30 @@
 import React from "react";
-import Counter from "./component/Counter";
-import Greet from "./component/Greet";
+import "./App.css";
+import Card from "./component/Card";
+import contacts from "./component/contacts";
+
+function createCard(contact) {
+  return (
+    <Card
+      key={contact.id}
+      name={contact.name}
+      img={contact.imgURL}
+      tel={contact.phone}
+      email={contact.email}
+    />
+  );
+}
+
+// const cardList = (contact) => {
+//   return <Card id={contact.id} name={contact.name} imgUrl={contact.imgUrl} />;
+// };
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <h2>Welcome To React</h2>
-      <Greet name="Mohit" />
-      <Greet name="Rajeev" />
-      <Greet name="Satrudhan" />
-      <Greet name="Rajeev" />
-      <Counter />
+      {/* {contacts.map(cardList)} */}
+      {contacts.map(createCard)}
     </div>
   );
 }
