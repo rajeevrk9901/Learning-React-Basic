@@ -9,7 +9,6 @@ function App() {
   const [name, setName] = useState("");
 
   const onChangeHandler = (event) => {
-    console.log(event.target.value);
     setName(event.target.value);
   };
 
